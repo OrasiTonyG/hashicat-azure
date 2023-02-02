@@ -16,8 +16,8 @@ module "network" {
   }
   use_for_each = true
   tags = {
-    environment = "dev"
-    costcenter  = "it"
+    environment = "production"
+    
   }
 
   depends_on = [azurerm_resource_group.myresourcegroup.name]
