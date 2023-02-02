@@ -1,8 +1,5 @@
 
-resource "azurerm_resource_group" "example" {
-  name     = "my-resources"
-  location = "West Europe"
-}
+
 
 module "network" {
   source              =  "app.terraform.io/OtherTG/network/azurerm"
