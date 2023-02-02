@@ -2,7 +2,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "myresourcegroup" {
   name     = "my-resources"
   location = "West Europe"
 }
@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "example" {
 module "network" {
   source              =  "app.terraform.io/OtherTG/network/azurerm"
   version = "3.5.0"
-  resource_group_name = “Gaurav”
+  resource_group_name = Gaurav
   address_spaces      = ["10.0.0.0/16", "10.2.0.0/16"]
   subnet_prefixes     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
   subnet_names        = ["subnet1", "subnet2", "subnet3"]
